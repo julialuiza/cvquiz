@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import Skeleton from 'react-loading-skeleton';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
@@ -9,9 +10,11 @@ import Button from '../src/components/Button';
 function LoadingWidget() {
   return (
     <Widget>
-      <Widget.Header>Carregando...</Widget.Header>
+      <Widget.Header>Loading...</Widget.Header>
 
-      <Widget.Content>[Desafio do Loading]</Widget.Content>
+      <Widget.Content>
+        <Skeleton height="25px" width="100%" count={5} />
+      </Widget.Content>
     </Widget>
   );
 }
@@ -89,7 +92,7 @@ export default function QuizPage() {
     // fetch() ...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 1 * 900);
     // nasce === didMount
   }, []);
 
