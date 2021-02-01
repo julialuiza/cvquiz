@@ -26,6 +26,7 @@ const QuizContainer = styled.div`
   @media screen and (max-width: 500px) {
     margin: auto;
     padding: 15px;
+    background-color: black;
   }
 `;
 
@@ -48,7 +49,7 @@ export default function Home() {
             <form
               onSubmit={function (infosDoEvento) {
                 infosDoEvento.preventDefault();
-                router.push(`/quiz?name=${name}`);
+                router.push(`/quiz`);
               }}
             >
               <Button type="submit">{`Start`}</Button>

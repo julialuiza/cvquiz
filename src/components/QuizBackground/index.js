@@ -11,15 +11,13 @@ const QuizBackground = styled.div`
   @media screen and (max-width: 500px) {
     background-image: none;
     &:after {
-      content: "";
+      content: '';
       background-size: cover;
-    background-position: center;
-      background-image:
-        linear-gradient(transparent, ${({ theme }) => theme.colors.mainBg}),
-        url(${({ backgroundImage }) => backgroundImage});
+      background-position: center;
+      background-color: black;
       display: block;
       width: 100%;
-      height: 210px;
+      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
