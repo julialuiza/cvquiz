@@ -14,16 +14,16 @@ const Button = styled.button`
   line-height: 1;
   text-transform: uppercase;
   outline: 0;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    opacity: .5;
+    opacity: 0.7;
   }
 
   &:disabled {
-    background-color: #979797;
+    background-color: #ababab;
     cursor: not-allowed;
   }
 `;
